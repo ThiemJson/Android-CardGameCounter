@@ -18,6 +18,6 @@
     <color name="gray_light">#A6BCC6</color>
     <color name="blue_facebook">#0085FF</color>
     <color name="drawer_item">#5ab5de</color>
-    <color name="transparent">#00000000</color>
+    <color name="transparent">#000000</color>
     <color name="textblack">#242526</color>
 </resources>

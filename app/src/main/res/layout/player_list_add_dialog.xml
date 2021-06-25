@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="170dp"
+    android:minWidth="300dp">
+
+    <EditText
+        android:id="@+id/player_list_add_dialog_player_name"
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_weight="2"
+        android:width="0dp"
+        android:background="@drawable/edit_text_player_list"
+        android:hint="Enter player name"
+        android:inputType="textNoSuggestions"
+        android:maxLength="30"
+        android:singleLine="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/player_list_add_dialog_button_container"
+        android:textAlignment="center"
+        android:textColor="@color/blue_primary"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:id="@+id/player_list_add_dialog_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:paddingEnd="30dp"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/player_list_add_dialog_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:background="@null"
+            android:fontFamily="@font/lincol"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/blue_primary"
+            android:textFontWeight="700"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <Button
+            android:id="@+id/player_list_add_dialog_add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:fontFamily="@font/lincol"
+            android:text="Add"
+            android:textAllCaps="false"
+            android:textColor="@color/blue_primary"
+            android:textFontWeight="700"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
