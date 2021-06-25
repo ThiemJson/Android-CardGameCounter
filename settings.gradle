@@ -1,0 +1,2 @@
+rootProject.name = "Android-ScoreCounter"
+include ':app'
