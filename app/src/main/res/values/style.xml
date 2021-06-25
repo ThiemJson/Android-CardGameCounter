@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BottomDialogTheme" parent="Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomDialogStyle</item>
+    </style>
+
+    <style name="BottomDialogStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/lincol</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="menu_item" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/lincol</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:color">@color/gray_dark</item>
+    </style>
+
+    <style name="profile_tab_item" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/lincol</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="policiesTextStyle" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/lincol</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">#707277</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="singleLine">false</item>
+    </style>
+
+    <style name="playerListName" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/lincol</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="singleLine">false</item>
+    </style>
+
+</resources>
