@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import teneocto.thiemjason.android_scorecounter.R;
+import teneocto.thiemjason.android_scorecounter.ui.gamelist.GameList;
 import teneocto.thiemjason.android_scorecounter.ui.players.PlayerAdapter;
 import teneocto.thiemjason.android_scorecounter.ui.players.Players;
 
@@ -18,7 +19,7 @@ public class HomeActivity extends AppCompatActivity {
 
         viewInitial();
 
-        Intent intent = new Intent(this, Players.class);
+        Intent intent = new Intent(this, GameList.class);
         startActivity(intent);
     }
 
