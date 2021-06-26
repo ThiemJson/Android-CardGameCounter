@@ -70,22 +70,27 @@ public class GameListAdapter extends RecyclerView.Adapter<GameListAdapter.ViewHo
             ArrayList<String> items = new ArrayList<>();
             items.add("Thiem");
             items.add("Duong");
+            items.add("Tuan ewe");
+            items.add("Tuan ewe");
+
+
             items.add("Thai");
             items.add("Hai");
             items.add("Tuan");
-            items.add("Thiem");
+            items.add("Thiemxas");
             items.add("Duong");
             items.add("Thai");
-            items.add("Hai");
-            items.add("Tuan");
+            items.add("Haxasx i");
+            items.add("Tuan ewe");
             items.add("Thiem");
             items.add("Thiem");
             mGridView.setAdapter(new GameListCellAdapter(items));
         }
     }
 
-    public interface GameListAdapterDelegate{
+    public interface GameListAdapterDelegate {
         void deleteGame(View view, int position);
+
         void viewGame(View view, int position);
     }
 }

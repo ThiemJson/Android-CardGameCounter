@@ -16,7 +16,7 @@
         <activity
             android:name=".ui.players.Players"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".ui.home.HomeActivity">
+        <activity android:name=".ui.home.Home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
