@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/game_setting_sync"
+        android:icon="@drawable/ic_baseline_sync_24"
+        android:iconTint="@color/blue_primary"
+        android:title="Sync games play"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/game_setting_add_players"
+        android:icon="@drawable/ic_baseline_person_add_24"
+        android:iconTint="@color/blue_primary"
+        android:title="Add game player"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/game_signIn"
+        android:icon="@drawable/ic_baseline_login_24"
+        android:iconTint="@color/blue_primary"
+        android:title="Sign in with Gmail or Facebook"
+        app:showAsAction="always|withText" />
+</menu>

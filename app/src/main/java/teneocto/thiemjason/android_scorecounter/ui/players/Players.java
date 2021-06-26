@@ -60,6 +60,7 @@ public class Players extends AppCompatActivity implements PlayerAdapter.PlayerAd
         this.mAddBtn = findViewById(R.id.player_list_add);
 
         this.mAddBtn.setOnClickListener(v -> addPlayer());
+        this.mBackBtn.setOnClickListener(v -> finish());
     }
 
     private void syncEmptyImage() {
