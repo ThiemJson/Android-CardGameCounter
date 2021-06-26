@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidScoreCounter">
-        <activity android:name=".ui.gamelist.GameList"></activity>
+        <activity android:name=".ui.gameplay.GamePlay"></activity>
+        <activity android:name=".ui.gamelist.GameList" />
         <activity
             android:name=".ui.players.Players"
             android:windowSoftInputMode="adjustPan" />

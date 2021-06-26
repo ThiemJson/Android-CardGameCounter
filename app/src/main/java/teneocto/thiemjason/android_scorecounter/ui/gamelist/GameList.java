@@ -39,6 +39,8 @@ public class GameList extends AppCompatActivity implements GameListAdapter.GameL
         this.mBackBtn = findViewById(R.id.game_list_back_icon);
         this.mRecycle = findViewById(R.id.game_list_recycle_view);
         this.mEmpty = findViewById(R.id.game_list_empty);
+
+        this.mBackBtn.setOnClickListener(v -> finish());
     }
 
     /**

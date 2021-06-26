@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/game_play_delete_round"
+        android:icon="@drawable/ic_baseline_delete_forever_24"
+        android:iconTint="@color/blue_primary"
+        android:title="Delete latest round"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/game_play_add_player"
+        android:icon="@drawable/ic_baseline_person_add_24"
+        android:iconTint="@color/blue_primary"
+        android:title="Add player to round"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/game_play_refresh_round"
+        android:icon="@drawable/ic_baseline_refresh_24"
+        android:iconTint="@color/blue_primary"
+        android:title="Reset game"
+        app:showAsAction="always|withText" />
+</menu>

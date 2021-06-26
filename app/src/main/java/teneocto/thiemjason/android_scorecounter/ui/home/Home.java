@@ -1,7 +1,6 @@
 package teneocto.thiemjason.android_scorecounter.ui.home;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,11 +9,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.menu.MenuBuilder;
+import androidx.appcompat.view.menu.MenuPopupHelper;
+import androidx.appcompat.widget.PopupMenu;
 
 import java.util.ArrayList;
 
 import teneocto.thiemjason.android_scorecounter.R;
 import teneocto.thiemjason.android_scorecounter.ui.gamelist.GameList;
+import teneocto.thiemjason.android_scorecounter.ui.gameplay.GamePlay;
+import teneocto.thiemjason.android_scorecounter.ui.players.Players;
 import teneocto.thiemjason.android_scorecounter.utils.AppConst;
 
 public class Home extends AppCompatActivity implements HomeAdapter.HomeAdapterDelegate {
@@ -58,6 +65,18 @@ public class Home extends AppCompatActivity implements HomeAdapter.HomeAdapterDe
 
         this.mGridView = findViewById(R.id.home_game_players_grid_view);
         this.mEmpty = findViewById(R.id.home_players_empty_layout);
+
+        this.mGameSetting.setOnClickListener(v -> this.onGameSettingClicked());
+        this.mGameStart.setOnClickListener(v -> {
+            Intent intent = new Intent(this, GamePlay.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+        });
+
+        this.mGameList.setOnClickListener(v -> {
+            Intent intent = new Intent(this, GameList.class);
+            startActivity(intent);
+        });
     }
 
     /**
@@ -89,5 +108,35 @@ public class Home extends AppCompatActivity implements HomeAdapter.HomeAdapterDe
     @Override
     public void onItemLick(View view, int position) {
         Log.i(AppConst.TAG_Home, " Clicked");
+    }
+
+    /**
+     * On Game Setting button click
+     */
+    @SuppressLint("RestrictedApi")
+    private void onGameSettingClicked() {
+        PopupMenu popup = new PopupMenu(this, this.mGameSetting);
+        popup.getMenuInflater().inflate(R.menu.game_setting_menu, popup.getMenu());
+
+        popup.setOnMenuItemClickListener(item -> {
+            switch (item.getItemId()){
+                case R.id.game_setting_sync:
+                    Toast.makeText(this, "Game sync successfully ", Toast.LENGTH_SHORT).show();
+                    break;
+                case R.id.game_setting_add_players:
+                    Intent intent = new Intent(this, Players.class);
+                    startActivity(intent);
+                    break;
+                case R.id.game_signIn:
+                    Toast.makeText(this, "Sign in successfully ! ", Toast.LENGTH_SHORT).show();
+                    break;
+            }
+
+            return true;
+        });
+
+        MenuPopupHelper menuHelper = new MenuPopupHelper(this, (MenuBuilder) popup.getMenu(), this.mGameSetting);
+        menuHelper.setForceShowIcon(true);
+        menuHelper.show();
     }
 }
