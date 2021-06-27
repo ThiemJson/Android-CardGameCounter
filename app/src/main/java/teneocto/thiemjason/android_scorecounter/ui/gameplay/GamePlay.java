@@ -8,14 +8,21 @@ import androidx.appcompat.widget.PopupMenu;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.appcompat.view.menu.MenuPopupHelper;
 import androidx.appcompat.widget.PopupMenu;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import teneocto.thiemjason.android_scorecounter.R;
 import teneocto.thiemjason.android_scorecounter.ui.gamelist.GameList;
@@ -29,12 +36,17 @@ public class GamePlay extends AppCompatActivity {
     TextView mGameName;
     TextView mGamePlayersCount;
 
+    TableLayout mHeaderTableLayout;
+    TableLayout mBodyTableLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_game_play);
 
         this.viewInitial();
+        this.initHeaderTableLayout();
+        this.initBodyTableLayout();
     }
 
     /**
@@ -47,6 +59,8 @@ public class GamePlay extends AppCompatActivity {
         this.mGameStatistic = findViewById(R.id.game_play_round_chart);
         this.mGameName = findViewById(R.id.game_play_game_name);
         this.mGamePlayersCount = findViewById(R.id.game_play_players_count);
+        this.mHeaderTableLayout = findViewById(R.id.game_play_header_table_layout);
+        this.mBodyTableLayout = findViewById(R.id.game_play_body_table_layout);
 
         this.mGameList.setOnClickListener(v -> {
             Intent intent = new Intent(this, GameList.class);
@@ -84,5 +98,33 @@ public class GamePlay extends AppCompatActivity {
         MenuPopupHelper menuHelper = new MenuPopupHelper(this, (MenuBuilder) popup.getMenu(), this.mGameSetting);
         menuHelper.setForceShowIcon(true);
         menuHelper.show();
+    }
+
+    /**
+     * Initial Header table layout
+     */
+    private void initHeaderTableLayout() {
+        TableRow tableRow = new TableRow(getApplicationContext());
+        for (int i = 0; i < 12; i++) {
+            LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
+            View view = inflater.inflate(R.layout.game_play_header_cell, tableRow, false);
+            tableRow.addView(view);
+        }
+        this.mHeaderTableLayout.addView(tableRow);
+    }
+
+    /**
+     * Initial Body table layout
+     */
+    private void initBodyTableLayout() {
+        for (int i = 0; i < 20; i++) {
+            TableRow tableRow = new TableRow(getApplicationContext());
+            for (int k = 0 ; k < 12 ; k ++){
+                LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
+                View view = inflater.inflate(R.layout.game_play_row_cell, tableRow, false);
+                tableRow.addView(view);
+            }
+            this.mHeaderTableLayout.addView(tableRow);
+        }
     }
 }

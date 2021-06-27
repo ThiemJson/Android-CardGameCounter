@@ -14,7 +14,7 @@
         android:background="@drawable/game_player_row_cell_background"
         android:fontFamily="@font/lincol"
         android:hint="__"
-        android:inputType="textNoSuggestions"
+        android:inputType="number"
         android:maxLength="4"
         android:singleLine="true"
         android:textAlignment="center"
