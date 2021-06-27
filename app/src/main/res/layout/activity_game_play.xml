@@ -25,7 +25,7 @@
         android:layout_height="0dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="5dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:clickable="false"
         app:layout_constraintBottom_toTopOf="@+id/game_play_bottom_container"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,13 +33,13 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <TableLayout
                 android:id="@+id/game_play_header_table_layout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/game_play_header_height"
                 app:layout_constraintBottom_toTopOf="@id/linearlayout2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -59,8 +59,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fillViewport="true"
-                    android:nestedScrollingEnabled="true"
-                    android:scrollbars="none"
+                    android:scrollbars="vertical"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

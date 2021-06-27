@@ -6,4 +6,5 @@ public class AppConst {
      */
     public static String TAG_Players = "==> Players";
     public static String TAG_Home = "==> Home";
+    public static String TAG_GamePlay = "==> GamePlay";
 }

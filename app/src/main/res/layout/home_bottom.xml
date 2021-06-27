@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="140dp">
+    android:background="@color/white"
+    android:layout_height="120dp">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -9,7 +10,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="60dp"
             android:layout_gravity="bottom"
             android:background="@drawable/color_background_gradient">
 
@@ -31,17 +32,19 @@
         </FrameLayout>
 
         <Button
+            android:elevation="5dp"
+            android:translationZ="10dp"
             android:id="@+id/home_game_start"
             android:layout_width="160dp"
             android:layout_height="60dp"
             android:layout_gravity="bottom|center"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="30dp"
             android:background="@drawable/color_home_start_btn_background"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:text="Start Game"
             android:textAppearance="@style/playerListName"
-            android:textColor="@color/blue_primary"
+            android:textColor="@color/white"
             android:textFontWeight="700"
             android:textSize="20sp"
             android:textStyle="bold" />

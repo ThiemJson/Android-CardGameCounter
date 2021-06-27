@@ -8,11 +8,15 @@ import androidx.appcompat.widget.PopupMenu;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -27,6 +31,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import teneocto.thiemjason.android_scorecounter.R;
 import teneocto.thiemjason.android_scorecounter.ui.gamelist.GameList;
 import teneocto.thiemjason.android_scorecounter.ui.players.Players;
+import teneocto.thiemjason.android_scorecounter.utils.AppConst;
 
 public class GamePlay extends AppCompatActivity {
     ImageView mAddRound;
@@ -106,6 +111,14 @@ public class GamePlay extends AppCompatActivity {
     private void initHeaderTableLayout() {
         TableRow tableRow = new TableRow(getApplicationContext());
         for (int i = 0; i < 12; i++) {
+            if (i == 0) {
+                LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
+                View view = inflater.inflate(R.layout.game_play_start_header_cell, tableRow, false);
+                tableRow.addView(view);
+                i++;
+                continue;
+            }
+
             LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
             View view = inflater.inflate(R.layout.game_play_header_cell, tableRow, false);
             tableRow.addView(view);
@@ -117,14 +130,22 @@ public class GamePlay extends AppCompatActivity {
      * Initial Body table layout
      */
     private void initBodyTableLayout() {
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 15; i++) {
             TableRow tableRow = new TableRow(getApplicationContext());
-            for (int k = 0 ; k < 12 ; k ++){
+            for (int k = 0; k < 12; k++) {
+                if (k == 0) {
+                    LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
+                    View view = inflater.inflate(R.layout.game_play_start_row_cell, tableRow, false);
+                    tableRow.addView(view);
+                    k++;
+                    continue;
+                }
+
                 LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
                 View view = inflater.inflate(R.layout.game_play_row_cell, tableRow, false);
                 tableRow.addView(view);
             }
-            this.mHeaderTableLayout.addView(tableRow);
+            this.mBodyTableLayout.addView(tableRow);
         }
     }
 }
