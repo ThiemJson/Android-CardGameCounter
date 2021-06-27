@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="140dp">
+    android:layout_height="125dp">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -45,7 +45,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:layout_gravity="bottom"
             android:background="@drawable/color_background_gradient">
 
@@ -75,11 +75,13 @@
         </FrameLayout>
 
         <ImageView
+            android:elevation="10dp"
+            android:translationZ="5dp"
             android:id="@+id/game_play_add"
             android:layout_width="85dp"
             android:layout_height="85dp"
             android:layout_gravity="bottom|center"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="30dp"
             android:background="@drawable/color_game_round_add_background"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"

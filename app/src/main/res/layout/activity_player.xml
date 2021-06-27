@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.players.Players">
 
     <include
@@ -51,6 +52,7 @@
         android:layout_gravity="end|bottom"
         android:layout_marginBottom="20dp"
         app:backgroundTint="#2f7eba"
+        android:background="@drawable/color_background_gradient"
         app:fabSize="auto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
