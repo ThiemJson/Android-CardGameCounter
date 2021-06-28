@@ -101,6 +101,7 @@ public class GamePlay extends AppCompatActivity {
                     break;
                 case R.id.game_play_delete_round:
                     Toast.makeText(this, "Delete round successfully ! ", Toast.LENGTH_SHORT).show();
+                    this.mBodyTableLayout.removeViewAt(this.mBodyTableLayout.getChildCount() - 1);
                     break;
             }
 

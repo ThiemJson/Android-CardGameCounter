@@ -56,7 +56,7 @@
             android:minWidth="70dp"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
-            android:text="21"
+            android:text="1"
             android:textColor="#f2f2f2"
             android:textSize="37sp" />
 
@@ -70,6 +70,74 @@
             app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24"
             app:tint="@color/blue_primary" />
 
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/game_play_sub_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:elevation="5dp"
+        android:fontFamily="@font/lincol"
+        android:gravity="center"
+        android:text="Tap to pick random \ncoefficient point in range"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textFontWeight="700"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:translationZ="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_play_pick_coefficient" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_marginHorizontal="40dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintBottom_toTopOf="@+id/game_list_delete_dialog_button_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_play_sub_text">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.97"
+            android:background="@drawable/edit_text_game_play_add_round_left"
+            android:fontFamily="@font/lincol"
+            android:inputType="numberSigned|numberDecimal"
+            android:maxLength="4"
+            android:singleLine="true"
+            android:text="1"
+            android:textAlignment="center"
+            android:textColor="@color/blue_primary"
+            android:textColorHint="@color/blue_primary"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.06" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.97"
+            android:background="@drawable/edit_text_game_play_add_round_right"
+            android:fontFamily="@font/lincol"
+            android:inputType="numberSigned|numberDecimal"
+            android:maxLength="4"
+            android:singleLine="true"
+            android:text="5"
+            android:textAlignment="center"
+            android:textColor="@color/blue_primary"
+            android:textColorHint="@color/blue_primary"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
