@@ -5,6 +5,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -65,6 +67,7 @@ public class GameList extends AppCompatActivity implements GameListAdapter.GameL
 
         this.mDialog = new Dialog(this);
         this.mDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         this.mDialog.setContentView(R.layout.game_list_delete_dialog);
 
         Button mDelete = this.mDialog.findViewById(R.id.game_list_delete_dialog_delete);

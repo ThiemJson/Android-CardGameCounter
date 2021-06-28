@@ -3,21 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="300dp"
     android:layout_height="170dp"
+    android:background="@drawable/color_dialog_background_gradient"
     android:minWidth="300dp">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
         android:fontFamily="@font/lincol"
         android:gravity="center"
         android:text="Add new player ?"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="@color/blue_primary"
+        android:textColor="@color/white"
         android:textFontWeight="700"
         android:textSize="14dp"
         android:textStyle="bold"
-        android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toTopOf="@+id/player_list_add_dialog_player_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +41,7 @@
         android:textAlignment="center"
         android:textColor="@color/blue_primary"
         android:textSize="13sp"
-        app:layout_constraintBottom_toTopOf="@+id/player_list_add_dialog_button_container"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -66,7 +67,7 @@
             android:fontFamily="@font/lincol"
             android:text="Cancel"
             android:textAllCaps="false"
-            android:textColor="@color/blue_primary"
+            android:textColor="@color/white"
             android:textFontWeight="700"
             android:textSize="14sp"
             android:textStyle="normal" />
@@ -80,7 +81,7 @@
             android:fontFamily="@font/lincol"
             android:text="Add"
             android:textAllCaps="false"
-            android:textColor="@color/blue_primary"
+            android:textColor="@color/white"
             android:textFontWeight="700"
             android:textSize="16sp"
             android:textStyle="bold" />
