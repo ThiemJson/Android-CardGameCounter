@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="130dp"
+    android:layout_marginVertical="3dp"
+    android:layout_height="45dp"
+    android:background="@drawable/game_play_statistic_item_background">
+
+    <Button
+        android:id="@+id/game_play_stastic_item_point"
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="2dp"
+        android:background="@drawable/color_game_player_static_circle"
+        android:maxLength="5"
+        android:text="-1243"
+        android:textColor="#f2f2f2"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lincol"
+        android:text="Thai lon"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textFontWeight="700"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:translationZ="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/game_play_stastic_item_point"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

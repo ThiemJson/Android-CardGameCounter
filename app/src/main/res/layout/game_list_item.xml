@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="260dp"
+    android:layout_height="140dp"
     android:layout_weight="4">
 
     <LinearLayout
@@ -47,8 +47,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_weight="2"
                 android:horizontalSpacing="6dp"
-                android:numColumns="4"
-                android:verticalSpacing="6dp" />
+                android:numColumns="4"/>
 
             <TextView
                 android:id="@+id/game_list_date"
@@ -79,11 +78,11 @@
             android:layout_height="match_parent"
             android:layout_weight="0.8"
             android:orientation="vertical"
-            android:weightSum="3">
+            android:weightSum="2">
 
             <ImageView
                 android:id="@+id/game_list_delete"
-                android:layout_width="40dp"
+                android:layout_width="30dp"
                 android:layout_height="0dp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
@@ -95,10 +94,10 @@
 
             <ImageView
                 android:id="@+id/game_list_view"
-                android:layout_width="40dp"
+                android:layout_width="30dp"
                 android:layout_height="0dp"
                 android:layout_gravity="center"
-                android:layout_weight="2"
+                android:layout_weight="1"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"

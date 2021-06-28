@@ -11,31 +11,22 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
-import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
-import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.view.menu.MenuBuilder;
-import androidx.appcompat.view.menu.MenuPopupHelper;
-import androidx.appcompat.widget.PopupMenu;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import teneocto.thiemjason.android_scorecounter.R;
 import teneocto.thiemjason.android_scorecounter.ui.gamelist.GameList;
 import teneocto.thiemjason.android_scorecounter.ui.players.Players;
-import teneocto.thiemjason.android_scorecounter.utils.AppConst;
 
 public class GamePlay extends AppCompatActivity {
     ImageView mAddRound;
@@ -48,7 +39,8 @@ public class GamePlay extends AppCompatActivity {
     TableLayout mHeaderTableLayout;
     TableLayout mBodyTableLayout;
 
-    Dialog mDialog;
+    Dialog mNewRoundDialog;
+    Dialog mStatisticDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +72,7 @@ public class GamePlay extends AppCompatActivity {
 
         this.mGameSetting.setOnClickListener(v -> onGamePlaySettingClick());
         this.mAddRound.setOnClickListener(v -> onAddRoundBtnClick());
+        this.mGameStatistic.setOnClickListener(v -> onStatisticBtnClick());
     }
 
     /**
@@ -161,16 +154,38 @@ public class GamePlay extends AppCompatActivity {
      * Add round
      */
     private void onAddRoundBtnClick(){
-        if (this.mDialog != null) {
-            this.mDialog.dismiss();
+        if (this.mNewRoundDialog != null) {
+            this.mNewRoundDialog.dismiss();
         }
 
-        this.mDialog = new Dialog(this);
-        this.mDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        this.mDialog.setContentView(R.layout.game_play_add_round_dialog);
-        this.mDialog.setCancelable(true);
+        this.mNewRoundDialog = new Dialog(this);
+        this.mNewRoundDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.mNewRoundDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        this.mNewRoundDialog.setContentView(R.layout.game_play_add_round_dialog);
+        this.mNewRoundDialog.setCancelable(true);
 
-        this.mDialog.show();
+        this.mNewRoundDialog.show();
+    }
+
+    /**
+     * On statistic button click
+     */
+    private void onStatisticBtnClick(){
+        if(this.mStatisticDialog != null){
+            this.mStatisticDialog.dismiss();
+        }
+
+        this.mStatisticDialog = new Dialog(this);
+        this.mStatisticDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.mStatisticDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        this.mStatisticDialog.setContentView(R.layout.game_play_statistic_dialog);
+        this.mStatisticDialog.setCancelable(true);
+
+        this.mStatisticDialog.show();
+
+        RecyclerView mStatisticRe = this.mStatisticDialog.findViewById(R.id.game_play_statistic_dialog_recycler);
+        StatisticAdapter mAdapter = new StatisticAdapter(this);
+        mStatisticRe.setLayoutManager(new LinearLayoutManager(this));
+        mStatisticRe.setAdapter(mAdapter);
     }
 }
