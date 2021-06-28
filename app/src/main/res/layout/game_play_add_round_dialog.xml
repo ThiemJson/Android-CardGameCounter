@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="400dp"
+    android:background="@drawable/color_dialog_background_gradient"
+    android:minWidth="300dp">
+
+    <TextView
+        android:id="@+id/game_play_add_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:elevation="5dp"
+        android:fontFamily="@font/lincol"
+        android:gravity="center"
+        android:text="Start new round !"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textFontWeight="700"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:translationZ="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/game_play_pick_coefficient"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game_play_add_dialog_title">
+
+
+        <ImageView
+            android:id="@+id/game_play_coefficient_minus"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/button_home_minus_plus"
+            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_left_24"
+            app:tint="@color/blue_primary" />
+
+        <Button
+            android:id="@+id/game_play_coefficient"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_home_pick_coe"
+            android:minWidth="70dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="21"
+            android:textColor="#f2f2f2"
+            android:textSize="37sp" />
+
+        <ImageView
+            android:id="@+id/game_play_coefficient_plus"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/button_home_minus_plus"
+            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24"
+            app:tint="@color/blue_primary" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/game_list_delete_dialog_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:elevation="5dp"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:translationZ="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/game_list_delete_dialog_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="40dp"
+            android:background="@drawable/color_game_play_add_round_dialog_background"
+            android:fontFamily="@font/lincol"
+            android:gravity="center"
+            android:text="START"
+            android:textAllCaps="false"
+            android:textColor="@color/blue_primary"
+            android:textFontWeight="700"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

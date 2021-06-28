@@ -6,13 +6,17 @@ import androidx.appcompat.view.menu.MenuPopupHelper;
 import androidx.appcompat.widget.PopupMenu;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
@@ -44,6 +48,8 @@ public class GamePlay extends AppCompatActivity {
     TableLayout mHeaderTableLayout;
     TableLayout mBodyTableLayout;
 
+    Dialog mDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,6 +79,7 @@ public class GamePlay extends AppCompatActivity {
         });
 
         this.mGameSetting.setOnClickListener(v -> onGamePlaySettingClick());
+        this.mAddRound.setOnClickListener(v -> onAddRoundBtnClick());
     }
 
     /**
@@ -147,5 +154,22 @@ public class GamePlay extends AppCompatActivity {
             }
             this.mBodyTableLayout.addView(tableRow);
         }
+    }
+
+    /**
+     * Add round
+     */
+    private void onAddRoundBtnClick(){
+        if (this.mDialog != null) {
+            this.mDialog.dismiss();
+        }
+
+        this.mDialog = new Dialog(this);
+        this.mDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        this.mDialog.setContentView(R.layout.game_play_add_round_dialog);
+        this.mDialog.setCancelable(true);
+
+        this.mDialog.show();
     }
 }

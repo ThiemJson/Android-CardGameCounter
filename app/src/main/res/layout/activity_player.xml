@@ -37,7 +37,7 @@
         android:layout_marginStart="6dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="6dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="15dp"
         app:layout_constraintBottom_toTopOf="@id/player_list_add"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,20 +45,27 @@
         tools:layout_editor_absoluteX="130dp"
         tools:layout_editor_absoluteY="299dp" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <ImageView
         android:id="@+id/player_list_add"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_gravity="bottom|center"
         android:layout_marginBottom="20dp"
-        app:backgroundTint="#2f7eba"
-        android:background="@drawable/color_background_gradient"
-        app:fabSize="auto"
+        android:background="@drawable/color_game_round_add_background"
+        android:elevation="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:src="@drawable/ic_baseline_add_24"
+        android:text="Start Game"
+        android:textAppearance="@style/playerListName"
+        android:textColor="@color/blue_primary"
+        android:textFontWeight="700"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:translationZ="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:maxImageSize="40dp"
-        app:srcCompat="@drawable/ic_baseline_add_24" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/player_list_players_count"

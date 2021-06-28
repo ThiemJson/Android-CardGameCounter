@@ -5,12 +5,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -26,7 +29,7 @@ public class Players extends AppCompatActivity implements PlayerAdapter.PlayerAd
     PlayerAdapter mAdapter;
     View mEmpty;
     Button mBackBtn;
-    FloatingActionButton mAddBtn;
+    ImageView mAddBtn;
     Dialog mDialog;
 
     @Override
@@ -77,6 +80,7 @@ public class Players extends AppCompatActivity implements PlayerAdapter.PlayerAd
 
         this.mDialog = new Dialog(this);
         this.mDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         this.mDialog.setContentView(R.layout.player_list_add_dialog);
 
         EditText mPlayerName = this.mDialog.findViewById(R.id.player_list_add_dialog_player_name);
@@ -108,6 +112,7 @@ public class Players extends AppCompatActivity implements PlayerAdapter.PlayerAd
 
         this.mDialog = new Dialog(this);
         this.mDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         this.mDialog.setContentView(R.layout.player_list_delete_dialog);
 
         Button mDelete = this.mDialog.findViewById(R.id.player_list_delete_dialog_delete);

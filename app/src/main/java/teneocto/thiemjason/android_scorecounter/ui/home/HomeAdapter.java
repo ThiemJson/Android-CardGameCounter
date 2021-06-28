@@ -31,7 +31,7 @@ public class HomeAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return this.names.size();
+        return this.names.size() + 1;
     }
 
     @Override
@@ -46,6 +46,16 @@ public class HomeAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        if (position == this.names.size()) {
+            if (convertView == null) {
+                final LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
+                convertView = layoutInflater.inflate(R.layout.home_grid_item_add_player, null);
+                return convertView;
+            }
+            return convertView;
+        }
+
+
         if (convertView == null) {
             final LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
             convertView = layoutInflater.inflate(R.layout.home_grid_item, null);
@@ -58,6 +68,7 @@ public class HomeAdapter extends BaseAdapter {
         view.setOnClickListener(v -> {
             this.delegate.onItemLick(view, position);
             this.playersClicked(view, mPlayerName, isClicked);
+
             isClicked = !isClicked;
         });
         mPlayerName.setText(names.get(position));

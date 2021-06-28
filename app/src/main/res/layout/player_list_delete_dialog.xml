@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="300dp"
     android:layout_height="170dp"
+    android:background="@drawable/color_dialog_background_gradient"
     android:minWidth="300dp">
 
     <TextView
@@ -13,7 +14,7 @@
         android:text="Delete player ?"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="@color/blue_primary"
+        android:textColor="@color/white"
         android:textFontWeight="700"
         android:textSize="23dp"
         android:textStyle="bold"
@@ -43,7 +44,7 @@
             android:fontFamily="@font/lincol"
             android:text="Cancel"
             android:textAllCaps="false"
-            android:textColor="@color/blue_primary"
+            android:textColor="@color/white"
             android:textFontWeight="700"
             android:textSize="14sp"
             android:textStyle="normal" />
@@ -57,7 +58,7 @@
             android:fontFamily="@font/lincol"
             android:text="Delete"
             android:textAllCaps="false"
-            android:textColor="@color/blue_primary"
+            android:textColor="@color/white"
             android:textFontWeight="700"
             android:textSize="16sp"
             android:textStyle="bold" />
