@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -26,7 +27,7 @@ public class Players extends AppCompatActivity implements PlayerAdapter.PlayerAd
     PlayerAdapter mAdapter;
     View mEmpty;
     Button mBackBtn;
-    FloatingActionButton mAddBtn;
+    ImageView mAddBtn;
     Dialog mDialog;
 
     @Override

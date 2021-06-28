@@ -5,13 +5,31 @@
     android:layout_height="170dp"
     android:minWidth="300dp">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lincol"
+        android:gravity="center"
+        android:text="Add new player ?"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/blue_primary"
+        android:textFontWeight="700"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/player_list_add_dialog_player_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/player_list_add_dialog_player_name"
         android:layout_width="match_parent"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_height="40dp"
         android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:layout_weight="2"
         android:width="0dp"
         android:background="@drawable/edit_text_player_list"
@@ -19,13 +37,13 @@
         android:inputType="textNoSuggestions"
         android:maxLength="30"
         android:singleLine="true"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/player_list_add_dialog_button_container"
         android:textAlignment="center"
         android:textColor="@color/blue_primary"
-        android:textSize="13sp" />
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/player_list_add_dialog_button_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/player_list_add_dialog_button_container"

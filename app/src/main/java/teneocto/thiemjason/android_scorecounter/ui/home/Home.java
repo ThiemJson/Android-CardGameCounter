@@ -84,13 +84,16 @@ public class Home extends AppCompatActivity implements HomeAdapter.HomeAdapterDe
      */
     private void gridViewInitial() {
         ArrayList<String> names = new ArrayList<String>();
-        names.add("eqw ");
-        names.add("eqw ");
-        names.add("eqw ");
-        names.add("eqw ");
-        names.add("eqw ");
-        names.add("eqw ");
-        names.add("eqw ");
+        names.add("Thiem ");
+        names.add("Hai ");
+        names.add("Thai ");
+        names.add("Duong ");
+        names.add("Tuan ");
+        names.add("Thai ");
+        names.add("Thiem ");
+        names.add("Thiem ");
+        names.add("Thiem ");
+        names.add("Thiem ");
 
         HomeAdapter adapter = new HomeAdapter(this, names);
         adapter.delegate = this;
