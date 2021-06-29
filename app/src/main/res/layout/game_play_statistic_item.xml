@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="130dp"
-    android:layout_marginVertical="3dp"
+    android:layout_width="match_parent"
     android:layout_height="45dp"
+    android:layout_marginHorizontal="40dp"
+    android:layout_marginVertical="3dp"
     android:background="@drawable/game_play_statistic_item_background">
 
     <Button
         android:id="@+id/game_play_stastic_item_point"
-        android:layout_width="40dp"
-        android:layout_height="25dp"
+        android:layout_width="60dp"
+        android:layout_height="27dp"
         android:layout_gravity="center"
         android:layout_marginStart="2dp"
         android:background="@drawable/color_game_player_static_circle"
         android:maxLength="5"
         android:text="-1243"
         android:textColor="#f2f2f2"
-        android:textSize="10sp"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,10 +26,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lincol"
-        android:text="Thai lon"
+        android:text="Thái lớn"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="@color/white"
+        android:textColor="@color/blue_primary"
         android:textFontWeight="700"
         android:textSize="12dp"
         android:textStyle="bold"
@@ -37,4 +38,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/game_play_stastic_item_point"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/color_background_gradient"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -84,8 +84,8 @@ public class HomeAdapter extends BaseAdapter {
             view.setBackgroundResource(R.drawable.color_background_home_grid_item_choose);
             playerName.setTextColor(Color.WHITE);
         } else {
-            view.setBackgroundResource(R.drawable.color_background_home_grid_item_default);
-            playerName.setTextColor(context.getResources().getColor(R.color.blue_primary, null));
+//            view.setBackgroundResource(R.drawable.color_background_home_grid_item_default);
+//            playerName.setTextColor(context.getResources().getColor(R.color.blue_primary, null));
         }
     }
 

@@ -11,13 +11,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
+
 import teneocto.thiemjason.android_scorecounter.R;
 
 public class StatisticAdapter extends RecyclerView.Adapter<StatisticAdapter.ViewHolder> {
     Context context;
+    ArrayList<Integer> numbers = new ArrayList<>();
 
-    public StatisticAdapter(Context context) {
+    public StatisticAdapter(Context context, ArrayList<Integer> numbers) {
         this.context = context;
+        this.numbers = numbers;
+
     }
 
     @NonNull
@@ -36,7 +41,7 @@ public class StatisticAdapter extends RecyclerView.Adapter<StatisticAdapter.View
 
     @Override
     public int getItemCount() {
-        return 10;
+        return this.numbers.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

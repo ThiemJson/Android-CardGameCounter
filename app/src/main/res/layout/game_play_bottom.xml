@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="110dp">
+    android:layout_height="90dp">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|end|top"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="6dp"
             android:layout_marginEnd="20dp"
             android:layout_weight="2"
             android:fontFamily="@font/lincol"
@@ -23,7 +23,7 @@
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/blue_primary"
-            android:textSize="20dp"
+            android:textSize="17dp"
             android:textStyle="bold" />
 
         <TextView
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|start|top"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="6dp"
             android:layout_weight="2"
             android:fontFamily="@font/lincol"
             android:gravity="center"
@@ -40,43 +40,43 @@
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/blue_primary"
-            android:textSize="20dp"
+            android:textSize="17dp"
             android:textStyle="bold" />
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:layout_gravity="bottom"
             android:background="@drawable/color_background_gradient">
 
             <Button
                 android:id="@+id/game_play_game_list"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_gravity="start|center_vertical"
                 android:layout_marginStart="25dp"
                 android:background="@drawable/ic_baseline_history_24" />
 
             <Button
                 android:id="@+id/game_play_lock"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_gravity="start|center_vertical"
                 android:layout_marginStart="86dp"
                 android:background="@drawable/ic_baseline_lock_open_24" />
 
             <Button
                 android:id="@+id/game_play_round_chart"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_gravity="end|center_vertical"
                 android:layout_marginEnd="90dp"
                 android:background="@drawable/ic_baseline_bar_chart_24" />
 
             <Button
                 android:id="@+id/game_play_round_setting"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_gravity="end|center_vertical"
                 android:layout_marginEnd="30dp"
                 android:background="@drawable/ic_baseline_dehaze_24" />
@@ -84,8 +84,8 @@
 
         <ImageView
             android:id="@+id/game_play_add"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
             android:layout_gravity="bottom|center"
             android:layout_marginBottom="18dp"
             android:background="@drawable/color_game_round_add_background"

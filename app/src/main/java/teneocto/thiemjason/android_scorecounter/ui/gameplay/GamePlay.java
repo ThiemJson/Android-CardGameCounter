@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -21,12 +22,19 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
+import me.rishabhkhanna.recyclerswipedrag.OnDragListener;
+import me.rishabhkhanna.recyclerswipedrag.OnSwipeListener;
+import me.rishabhkhanna.recyclerswipedrag.RecyclerHelper;
 import teneocto.thiemjason.android_scorecounter.R;
 import teneocto.thiemjason.android_scorecounter.ui.gamelist.GameList;
 import teneocto.thiemjason.android_scorecounter.ui.players.Players;
+import teneocto.thiemjason.android_scorecounter.utils.AppConst;
 
 public class GamePlay extends AppCompatActivity {
     ImageView mAddRound;
@@ -153,7 +161,7 @@ public class GamePlay extends AppCompatActivity {
     /**
      * Add round
      */
-    private void onAddRoundBtnClick(){
+    private void onAddRoundBtnClick() {
         if (this.mNewRoundDialog != null) {
             this.mNewRoundDialog.dismiss();
         }
@@ -170,8 +178,8 @@ public class GamePlay extends AppCompatActivity {
     /**
      * On statistic button click
      */
-    private void onStatisticBtnClick(){
-        if(this.mStatisticDialog != null){
+    private void onStatisticBtnClick() {
+        if (this.mStatisticDialog != null) {
             this.mStatisticDialog.dismiss();
         }
 
@@ -181,11 +189,39 @@ public class GamePlay extends AppCompatActivity {
         this.mStatisticDialog.setContentView(R.layout.game_play_statistic_dialog);
         this.mStatisticDialog.setCancelable(true);
 
+
         this.mStatisticDialog.show();
 
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(12);
+        numbers.add(12);
+        numbers.add(12);
+        numbers.add(12);
+        numbers.add(12);
+        numbers.add(12);
+        numbers.add(12);
+        numbers.add(12);
+        numbers.add(12);
+        numbers.add(12);
+        numbers.add(12);
+        numbers.add(12);
+        numbers.add(12);
+        numbers.add(12);
+        numbers.add(12);
+
         RecyclerView mStatisticRe = this.mStatisticDialog.findViewById(R.id.game_play_statistic_dialog_recycler);
-        StatisticAdapter mAdapter = new StatisticAdapter(this);
+        StatisticAdapter mAdapter = new StatisticAdapter(this, numbers);
         mStatisticRe.setLayoutManager(new LinearLayoutManager(this));
         mStatisticRe.setAdapter(mAdapter);
+
+
+        RecyclerHelper touchHelper = new RecyclerHelper<Integer>(numbers, (RecyclerView.Adapter) mAdapter);
+        touchHelper.setRecyclerItemDragEnabled(true);
+        touchHelper.setRecyclerItemSwipeEnabled(true);
+        touchHelper
+                .setOnDragItemListener((fromPosition, toPosition) -> Log.d(AppConst.TAG_GamePlay, "onDragItemListener: callback after dragging recycler view item"))
+                .setOnSwipeItemListener(() -> Log.d(AppConst.TAG_GamePlay, "onSwipeItemListener: callback after swiping recycler view item"));
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(touchHelper);
+        itemTouchHelper.attachToRecyclerView(mStatisticRe);
     }
 }
