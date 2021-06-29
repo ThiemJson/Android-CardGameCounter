@@ -1,52 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:background="@color/white"
-    android:layout_height="120dp">
+    android:layout_height="80dp"
+    android:background="@drawable/dark_bottom_bar_background">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <Button
+        android:id="@+id/home_game_list"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_baseline_history_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/home_game_start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_gravity="bottom"
-            android:background="@drawable/color_background_gradient">
+    <Button
+        android:id="@+id/home_game_setting"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_baseline_settings_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/home_game_start"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/home_game_list"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="start|center_vertical"
-                android:layout_marginStart="20dp"
-                android:background="@drawable/ic_baseline_history_24" />
+    <Button
+        android:id="@+id/home_game_start"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:background="@null"
+        android:elevation="5dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="START GAME"
+        android:textAppearance="@style/playerListName"
+        android:textColor="@color/white"
+        android:textFontWeight="700"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/home_game_setting"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="end|center_vertical"
-                android:layout_marginEnd="20dp"
-                android:background="@drawable/ic_baseline_settings_24" />
-        </FrameLayout>
-
-        <Button
-            android:elevation="5dp"
-            android:translationZ="10dp"
-            android:id="@+id/home_game_start"
-            android:layout_width="160dp"
-            android:layout_height="60dp"
-            android:layout_gravity="bottom|center"
-            android:layout_marginBottom="30dp"
-            android:background="@drawable/color_home_start_btn_background"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:text="Start Game"
-            android:textAppearance="@style/playerListName"
-            android:textColor="@color/white"
-            android:textFontWeight="700"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
