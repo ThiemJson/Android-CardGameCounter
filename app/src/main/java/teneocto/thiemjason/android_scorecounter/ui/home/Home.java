@@ -15,10 +15,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.appcompat.view.menu.MenuPopupHelper;
 import androidx.appcompat.widget.PopupMenu;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModel;
 
 import java.util.ArrayList;
 
 import teneocto.thiemjason.android_scorecounter.R;
+import teneocto.thiemjason.android_scorecounter.models.Player;
 import teneocto.thiemjason.android_scorecounter.ui.gamelist.GameList;
 import teneocto.thiemjason.android_scorecounter.ui.gameplay.GamePlay;
 import teneocto.thiemjason.android_scorecounter.ui.players.Players;
@@ -40,12 +44,15 @@ public class Home extends AppCompatActivity implements HomeAdapter.HomeAdapterDe
     GridView mGridView;
     View mEmpty;
 
+    HomeViewModel mViewModel;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        this.mViewModel = new HomeViewModel();
         viewInitial();
         gridViewInitial();
     }
@@ -83,19 +90,7 @@ public class Home extends AppCompatActivity implements HomeAdapter.HomeAdapterDe
      * GridView initial
      */
     private void gridViewInitial() {
-        ArrayList<String> names = new ArrayList<String>();
-        names.add("Thiem ");
-        names.add("Hai ");
-        names.add("Thai ");
-        names.add("Duong ");
-        names.add("Tuan ");
-        names.add("Thai ");
-        names.add("Thiem ");
-        names.add("Thiem ");
-        names.add("Thiem ");
-        names.add("Thiem ");
-
-        HomeAdapter adapter = new HomeAdapter(this, names);
+        HomeAdapter adapter = new HomeAdapter(this, this.mViewModel.players.getValue());
         adapter.delegate = this;
         this.mGridView.setAdapter(adapter);
         this.hideShowEmpty();
@@ -142,4 +137,16 @@ public class Home extends AppCompatActivity implements HomeAdapter.HomeAdapterDe
         menuHelper.setForceShowIcon(true);
         menuHelper.show();
     }
+
+//    /**
+//     * View model live data listener
+//     */
+//    private void viewModelLiveDataListener(){
+//        this.mViewModel.players.observe( , new Observer<ArrayList<Player>>() {
+//            @Override
+//            public void onChanged(ArrayList<Player> players) {
+//
+//            }
+//        });
+//    }
 }

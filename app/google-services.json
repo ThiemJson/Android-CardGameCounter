@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "965287458138",
+    "project_id": "tenescorecounter",
+    "storage_bucket": "tenescorecounter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965287458138:android:c256003fc7e2156c6b2f63",
+        "android_client_info": {
+          "package_name": "teneocto.thiemjason.android_scorecounter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965287458138-bqcear5qmov8r99iknog74vmt1mc5vo4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2UXsn4g3Dls6HdQKr21MeieNmMSJzU9k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965287458138-bqcear5qmov8r99iknog74vmt1mc5vo4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
