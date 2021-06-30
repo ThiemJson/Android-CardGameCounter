@@ -30,53 +30,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/home_game_name"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="50dp"
-        android:background="@drawable/edit_text_home"
-        android:elevation="5dp"
-        android:fontFamily="@font/lincol"
-        android:hint="Enter game name"
-        android:inputType="textNoSuggestions"
-        android:maxLength="30"
-        android:outlineAmbientShadowColor="@color/blue_primary"
-        android:singleLine="true"
-        android:textAlignment="textStart"
-        android:textColor="@color/blue_primary"
-        android:textColorHint="@color/blue_primary"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/home_game_game_setting_text" />
-
     <LinearLayout
-        android:id="@+id/home_game_players_layout"
+        android:id="@+id/home_game_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:weightSum="2"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/dark_edit_text_group_background"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/home_game_name">
+        app:layout_constraintTop_toBottomOf="@+id/home_game_game_setting_text">
+
 
         <EditText
-            android:id="@+id/home_game_max_players"
-            android:layout_width="0dp"
+            android:id="@+id/home_game_name"
+            android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/edit_text_home"
             android:elevation="5dp"
             android:fontFamily="@font/lincol"
-            android:hint="Max players (opt)"
-            android:inputType="number"
+            android:hint="Enter game name"
+            android:inputType="textNoSuggestions"
             android:maxLength="30"
+            android:outlineAmbientShadowColor="@color/blue_primary"
             android:singleLine="true"
             android:textAlignment="textStart"
             android:textColor="@color/blue_primary"
@@ -84,78 +64,122 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/home_game_game_setting_text" />
 
-        <EditText
-            android:id="@+id/home_game_max_score"
-            android:layout_width="0dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/edit_text_home"
-            android:elevation="5dp"
-            android:fontFamily="@font/lincol"
-            android:hint="Max score (opt)"
-            android:inputType="number"
-            android:maxLength="30"
-            android:singleLine="true"
-            android:textAlignment="textStart"
-            android:textColor="@color/blue_primary"
-            android:textColorHint="@color/blue_primary"
-            android:textSize="14sp"
+        <LinearLayout
+            android:id="@+id/home_game_players_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/home_game_name">
+
+            <EditText
+                android:id="@+id/home_game_max_players"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_home"
+                android:elevation="5dp"
+                android:fontFamily="@font/lincol"
+                android:hint="Max players (opt)"
+                android:inputType="number"
+                android:maxLength="30"
+                android:singleLine="true"
+                android:textAlignment="textStart"
+                android:textColor="@color/blue_primary"
+                android:textColorHint="@color/blue_primary"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/home_game_max_score"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_home"
+                android:elevation="5dp"
+                android:fontFamily="@font/lincol"
+                android:hint="Max score (opt)"
+                android:inputType="number"
+                android:maxLength="30"
+                android:singleLine="true"
+                android:textAlignment="textStart"
+                android:textColor="@color/blue_primary"
+                android:textColorHint="@color/blue_primary"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/home_game_players_count"
+    <LinearLayout
+        android:background="@drawable/dark_edit_text_group_background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="10dp"
-        android:gravity="bottom|start"
-        android:text="Players: 8"
-        android:textAppearance="@style/playerListName"
-        android:textColor="@color/blue_primary"
-        android:textSize="17sp"
-        app:layout_constraintBottom_toTopOf="@+id/home_game_players_grid_view"
+        android:layout_marginHorizontal="40dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/home_bottom_layout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_game_edit_text">
 
-    <include
-        android:id="@+id/home_players_empty_layout"
-        layout="@layout/home_players_empty"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="25dp"
-        app:layout_constraintBottom_toTopOf="@id/home_bottom_layout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/home_game_players_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="bottom|start"
+            android:text="Players: 8"
+            android:textAppearance="@style/playerListName"
+            android:textColor="@color/dark_orange_light"
+            android:textSize="17sp" />
 
-    <GridView
-        android:id="@+id/home_game_players_grid_view"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="25dp"
-        android:horizontalSpacing="5dp"
-        android:numColumns="3"
-        android:verticalSpacing="5dp"
-        app:layout_constraintBottom_toTopOf="@id/home_bottom_layout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/home_players_empty_layout"
+                layout="@layout/home_players_empty"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="25dp" />
+
+            <GridView
+                android:id="@+id/home_game_players_grid_view"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="25dp"
+                android:horizontalSpacing="5dp"
+                android:numColumns="3"
+                android:verticalSpacing="5dp" />
+        </FrameLayout>
+
+    </LinearLayout>
 
     <!--    Bottom-->
     <include
         android:id="@+id/home_bottom_layout"
         layout="@layout/home_bottom"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_height="70dp"
         android:layout_marginHorizontal="15dp"
         android:layout_marginBottom="30dp"
         app:layout_constraintBottom_toBottomOf="parent"

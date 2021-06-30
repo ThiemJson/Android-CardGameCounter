@@ -22,12 +22,13 @@
     <color name="textblack">#242526</color>
 
     <!--    Dark color-->
+<!--    golden #e7ba68 orange #e84c2a-->
     <color name="dark_gray">#C0BDBD</color>
     <color name="dark_red">#E51807</color>
     <color name="dark_black">#050607</color>
     <color name="dark_brown">#5C1306</color>
     <color name="dark_background">#292c31</color>
     <color name="dark_orange">#e84c2a</color>
-    <color name="dark_orange_light">#e95b2b</color>
+    <color name="dark_orange_light">#d7b668</color>
 
 </resources>
