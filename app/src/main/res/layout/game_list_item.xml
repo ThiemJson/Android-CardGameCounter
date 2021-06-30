@@ -2,20 +2,23 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="140dp"
+    android:layout_height="130dp"
     android:layout_weight="4">
 
     <LinearLayout
+        android:elevation="5dp"
+        android:translationZ="5dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="8dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/color_game_list_background"
+        android:background="@drawable/color_dialog_background_gradient"
         android:orientation="horizontal">
 
         <LinearLayout
+            android:layout_marginTop="20dp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3.2"
@@ -30,24 +33,13 @@
                 android:layout_marginEnd="30dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/lincol"
-                android:gravity="center"
+                android:gravity="start"
                 android:text="Thang 12"
-                android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="@color/blue_primary"
+                android:textColor="@color/white"
                 android:textFontWeight="700"
-                android:textSize="18dp"
+                android:textSize="14dp"
                 android:textStyle="bold" />
-
-            <GridView
-                android:id="@+id/game_list_grid_view"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_margin="5dp"
-                android:layout_marginStart="5dp"
-                android:layout_weight="2"
-                android:horizontalSpacing="6dp"
-                android:numColumns="4"/>
 
             <TextView
                 android:id="@+id/game_list_date"
@@ -57,32 +49,31 @@
                 android:layout_marginEnd="30dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/lincol"
-                android:gravity="center"
+                android:gravity="start"
                 android:text="Thứ Bảy, 26 tháng 6, 2021"
-                android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="@color/gray_dark"
+                android:textColor="@color/white"
                 android:textFontWeight="700"
-                android:textSize="15dp"
+                android:textSize="11dp"
                 android:textStyle="italic" />
         </LinearLayout>
 
         <View
-            android:layout_width="2dp"
+            android:layout_width="4dp"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:background="@color/blue_primary" />
+            android:layout_margin="0dp"
+            android:background="@color/white" />
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.8"
+            android:layout_weight="0.7"
             android:orientation="vertical"
             android:weightSum="2">
 
             <ImageView
                 android:id="@+id/game_list_delete"
-                android:layout_width="30dp"
+                android:layout_width="25dp"
                 android:layout_height="0dp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
@@ -90,11 +81,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_baseline_cancel_24"
-                app:tint="@color/blue_primary" />
+                app:tint="@color/white" />
 
             <ImageView
                 android:id="@+id/game_list_view"
-                android:layout_width="30dp"
+                android:layout_width="25dp"
                 android:layout_height="0dp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
@@ -102,7 +93,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_baseline_play_circle_outline_24"
-                app:tint="@color/blue_primary" />
+                app:tint="@color/white" />
         </LinearLayout>
 
     </LinearLayout>

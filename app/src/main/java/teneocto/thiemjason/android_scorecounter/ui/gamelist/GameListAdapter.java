@@ -50,7 +50,6 @@ public class GameListAdapter extends RecyclerView.Adapter<GameListAdapter.ViewHo
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView mGameName;
         TextView mCreatedDate;
-        GridView mGridView;
         ImageView mDeleteGame;
         ImageView mViewGame;
 
@@ -59,32 +58,11 @@ public class GameListAdapter extends RecyclerView.Adapter<GameListAdapter.ViewHo
 
             mGameName = itemView.findViewById(R.id.game_list_name);
             mCreatedDate = itemView.findViewById(R.id.game_list_date);
-            mGridView = itemView.findViewById(R.id.game_list_grid_view);
             mDeleteGame = itemView.findViewById(R.id.game_list_delete);
             mViewGame = itemView.findViewById(R.id.game_list_view);
 
             mDeleteGame.setOnClickListener(v -> delegate.deleteGame(itemView, getAdapterPosition()));
             mViewGame.setOnClickListener(v -> delegate.viewGame(itemView, getAdapterPosition()));
-
-            // Dummy Data
-            ArrayList<String> items = new ArrayList<>();
-            items.add("Thiem");
-            items.add("Duong");
-            items.add("Tuan ewe");
-            items.add("Tuan ewe");
-
-
-            items.add("Thai");
-            items.add("Hai");
-            items.add("Tuan");
-            items.add("Thiemxas");
-            items.add("Duong");
-            items.add("Thai");
-            items.add("Haxasx i");
-            items.add("Tuan ewe");
-            items.add("Thiem");
-            items.add("Thiem");
-            mGridView.setAdapter(new GameListCellAdapter(items));
         }
     }
 

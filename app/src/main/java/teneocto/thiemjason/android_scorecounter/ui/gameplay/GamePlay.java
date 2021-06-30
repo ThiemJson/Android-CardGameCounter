@@ -16,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -35,6 +36,7 @@ import teneocto.thiemjason.android_scorecounter.R;
 import teneocto.thiemjason.android_scorecounter.ui.gamelist.GameList;
 import teneocto.thiemjason.android_scorecounter.ui.players.Players;
 import teneocto.thiemjason.android_scorecounter.utils.AppConst;
+import teneocto.thiemjason.android_scorecounter.utils.Utils;
 
 public class GamePlay extends AppCompatActivity {
     ImageView mAddRound;
@@ -54,7 +56,6 @@ public class GamePlay extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_game_play);
-
         this.viewInitial();
         this.initHeaderTableLayout();
         this.initBodyTableLayout();
@@ -81,6 +82,8 @@ public class GamePlay extends AppCompatActivity {
         this.mGameSetting.setOnClickListener(v -> onGamePlaySettingClick());
         this.mAddRound.setOnClickListener(v -> onAddRoundBtnClick());
         this.mGameStatistic.setOnClickListener(v -> onStatisticBtnClick());
+        HorizontalScrollView ho = findViewById(R.id.game_play_horizontal_scroll_view);
+        ho.setOnClickListener(v -> Utils.hideKeyboard(this));
     }
 
     /**
